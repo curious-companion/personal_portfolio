@@ -83,7 +83,7 @@ const About = () => {
                             }
                         }}
                             fontWeight='600'>
-                            About Me, Im Vibhanshu Jain
+                            About Me, I&apos;m Vibhanshu Jain
                         </Typography>
                         <Typography
                             variant='h2'
@@ -94,7 +94,7 @@ const About = () => {
                                 sm: '1em'
                             }
                         }}>
-                      Hi, I'm **Vibhanshu Jain**, a passionate Full Stack Developer who loves building robust and user-friendly digital experiences. With a solid grasp of the **MERN stack**, **RDBMS**, and **Python**, I specialize in crafting modern web and mobile applications that solve real-world problems.
+                      Hi, I&apos;m Vibhanshu Jain, a passionate Full Stack Developer who loves building robust and user-friendly digital experiences. With a solid grasp of the <span style={{color:'#0092ff', fontWeight:'bold'}}>  MERN stack </span>, <span style={{color:'#0092ff', fontWeight:'bold'}}> RDBMS</span>, and <span style={{color:'#0092ff', fontWeight:'bold'}}>Python</span>, I specialize in crafting modern web and mobile applications that solve real-world problems.
                         </Typography>
                     </Box>
                     <Typography
@@ -107,15 +107,15 @@ const About = () => {
                             },
                             pb:'.5em'
                         }}>
-                      Beyond development, I have a strong command over **Data Structures and Algorithms in Java**, which enhances my problem-solving skills and helps me write efficient, optimized code.
+                      Beyond development, I have a strong command over <span style={{color:'#0092ff', fontWeight:'bold'}}>Data Structures and Algorithms in Java</span>, which enhances my problem-solving skills and helps me write efficient, optimized code.
 
                         </Typography>
                     <ReadMore>
-                    Whether it's designing intuitive user interfaces, architecting scalable backends, or diving deep into debugging, I enjoy every part of the development process. I'm always exploring new technologies, collaborating on impactful projects, and looking for opportunities to learn and grow.
+                    Whether it&apos;s designing intuitive user interfaces, architecting scalable backends, or diving deep into debugging, I enjoy every part of the development process. I'm always exploring new technologies, collaborating on impactful projects, and looking for opportunities to learn and grow.
 
-When I’m not coding, you’ll find me brainstorming startup ideas, experimenting with AI, or listening to music while sketching out my next project!
+When I&apos;m not coding, you&apos;ll find me brainstorming startup ideas, experimenting with AI, or listening to music while sketching out my next project!
 
-Let’s build something awesome together.
+Let&apos;s build something awesome together.
                     </ReadMore>
                 </Grid>
             </Grid>
