@@ -19,7 +19,7 @@ const Hero = () => {
     useEffect(() => {
         HeroSectionAnimation(q)
 
-    }, [])
+    }, [q])
 
     return (
         <Container
