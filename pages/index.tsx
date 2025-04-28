@@ -46,7 +46,7 @@ const Home : NextPage = ({projectsArray} : any) => {
         },
         {
             filter: 'Language',
-            svg: '/assets/css.png',
+            svg: '/assets/html.png',
             title: 'CSS',
             isBackend: false,
         },
