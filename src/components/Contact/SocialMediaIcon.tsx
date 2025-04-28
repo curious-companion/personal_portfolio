@@ -1,8 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { centeredStyles } from "../Sections/Perks/Perks";
-import Image from "next/image";
 import { ISocialMedia } from "../../Types/Types";
-import { isValidElement } from "react";
 
 const SocialMediaIcon = ({ title, svg, href, filter }: ISocialMedia) => {
   return (
@@ -28,17 +26,10 @@ const SocialMediaIcon = ({ title, svg, href, filter }: ISocialMedia) => {
           height: { xs: "35px" },
         }}
       >
-        {isValidElement(svg) ? (
-          svg
-        ) : (
-          <Image
-            alt="Icon"
-            className={`${filter ? "filter" : ""} icon`}
-            width={24}
-            height={24}
-            src={svg as string}
-          />
-        )}
+        {/* Apply filter if the prop is true */}
+        {React.cloneElement(svg, {
+          className: filter ? "filter" : "", // Apply the filter class if the filter is true
+        })}
       </Box>
       <Typography
         variant="h3"

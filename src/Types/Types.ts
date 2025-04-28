@@ -1,5 +1,6 @@
 import {SvgIconTypeMap} from "@mui/material";
 import {OverridableComponent} from "@mui/material/OverridableComponent";
+import {ReactElement} from "react";
 
 export interface ICustomLink {
     text : string;
@@ -42,7 +43,9 @@ export interface IToolCard {
     className ?: string;
     filter?: boolean
 }
-export interface ISocialMedia extends IToolCard {
+export interface ISocialMedia {
+    title : string;
+    svg : ReactElement;
     color : string;
     href : string;
 }
