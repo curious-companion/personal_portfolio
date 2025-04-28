@@ -43,21 +43,10 @@ a :visited {
 }
 
 .icon {
-  width: 130px !important;
-  height: 130px !important;
+  width: 60px !important;
+  height: 60px !important;
 }
 
-.ball {
-  width: 20px;
-  height: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  border: 3px solid #0092ff;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 24124124;
-}
 
 .t25o0 {
   transform: translateY(25px);
