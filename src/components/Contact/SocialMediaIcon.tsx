@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import { centeredStyles } from "../Sections/Perks/Perks";
 import { ISocialMedia } from "../../Types/Types";
+import React from "react";
 
 const SocialMediaIcon = ({ title, svg, href, filter }: ISocialMedia) => {
   return (
@@ -26,10 +27,8 @@ const SocialMediaIcon = ({ title, svg, href, filter }: ISocialMedia) => {
           height: { xs: "35px" },
         }}
       >
-        {/* Apply filter if the prop is true */}
-        {React.cloneElement(svg, {
-          className: filter ? "filter" : "", // Apply the filter class if the filter is true
-        })}
+        {/* Directly render the React component (SVG) */}
+        {svg}
       </Box>
       <Typography
         variant="h3"
