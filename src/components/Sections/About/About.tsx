@@ -111,7 +111,7 @@ const About = () => {
 
                         </Typography>
                     <ReadMore>
-                    Whether it&apos;s designing intuitive user interfaces, architecting scalable backends, or diving deep into debugging, I enjoy every part of the development process. I'm always exploring new technologies, collaborating on impactful projects, and looking for opportunities to learn and grow.
+                    Whether it&apos;s designing intuitive user interfaces, architecting scalable backends, or diving deep into debugging, I enjoy every part of the development process. I&apos;m always exploring new technologies, collaborating on impactful projects, and looking for opportunities to learn and grow.
 
 When I&apos;m not coding, you&apos;ll find me brainstorming startup ideas, experimenting with AI, or listening to music while sketching out my next project!
 
