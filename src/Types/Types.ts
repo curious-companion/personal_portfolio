@@ -48,6 +48,7 @@ export interface ISocialMedia {
     svg : ReactElement;
     color : string;
     href : string;
+    filter ?: boolean
 }
 export interface IDrawerItem {
     text : string;
