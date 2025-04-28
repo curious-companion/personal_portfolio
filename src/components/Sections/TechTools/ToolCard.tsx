@@ -5,6 +5,7 @@ import {IToolCard} from '../../../Types/Types';
 import {centeredStyles} from '../Perks/Perks';
 import {useEffect} from 'react';
 import gsap from 'gsap'
+import { Height } from '@mui/icons-material';
 const ToolCard = ({title, svg, filter, className} : IToolCard) => {
 
     useEffect(() => {
@@ -51,7 +52,13 @@ const ToolCard = ({title, svg, filter, className} : IToolCard) => {
                     ? 'filter '
                     : ''} icon`}
                     width={60}
-                    height={60}
+                    height={60} 
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'contain',
+                    }}
+                    
                     src={`${svg}`}/>
             </Box>
             <Typography
