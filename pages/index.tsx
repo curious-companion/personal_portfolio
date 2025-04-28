@@ -64,7 +64,7 @@ const Home : NextPage = ({projectsArray} : any) => {
         },
         {
             filter: 'Framework',
-            svg: '/assets/Nodejs.png',
+            svg: '/assets/nodejs.png',
             title: 'Nodejs',
             isBackend: false,
         },
@@ -76,13 +76,13 @@ const Home : NextPage = ({projectsArray} : any) => {
         },
         {
             filter: 'Framework',
-            svg: '/assets/Expressjs.png',
+            svg: '/assets/expressjs.png',
             title: 'Express.js',
             isBackend: false,
         },
         {
             filter: 'Framework',
-            svg: '/assets/Nextjs.png',
+            svg: '/assets/nextjs.png',
             title: 'Nextjs',
             isBackend: false,
         },
