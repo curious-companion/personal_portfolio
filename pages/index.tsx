@@ -46,7 +46,7 @@ const Home : NextPage = ({projectsArray} : any) => {
         },
         {
             filter: 'Language',
-            svg: '/assets/html.png',
+            svg: '/assets/css.png',
             title: 'CSS',
             isBackend: false,
         },
@@ -70,8 +70,8 @@ const Home : NextPage = ({projectsArray} : any) => {
         },
         {
             filter: 'Framework',
-            svg: '/assets/Django.png',
-            title: 'CSS',
+            svg: '/assets/django.png',
+            title: 'Django',
             isBackend: false,
         },
         {
