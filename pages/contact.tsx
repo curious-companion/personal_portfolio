@@ -252,7 +252,7 @@ const Contact = () => {
                             href={`https://www.google.com/maps/place/Lebanon/data=!4m2!3m1!1s0x151f17028422aaad:0xcc7d34096c00f970?sa=X&ved=2ahUKEwiK1JSG9or9AhXfUaQEHdUJC40Q8gF6BAgIEAI`}
                             target='_blank'
                             t1='Location'
-                             t2='Currently living in' t3='Lebanon/Beirut'/>
+                             t2='Currently living in' t3='Delhi, India'/>
                             <ContactBox 
                             target='_blank'
                             href={'https://wa.me/917011845449'}
