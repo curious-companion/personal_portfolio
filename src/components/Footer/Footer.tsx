@@ -34,7 +34,7 @@ const styles = {
 function Footer() {
     const router = useRouter();
 
-    const scrollToSection = (id) => {
+    const scrollToSection = (id:string) => {
         router.push('/');
         gsap.to(window, { duration: 0.8, scrollTo: `#${id}` });
     };
