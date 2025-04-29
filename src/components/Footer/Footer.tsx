@@ -65,9 +65,8 @@ function Footer() {
 
                         <Box sx={styles}>
                             <Typography variant='h3' fontSize='1em'>
-                                Hi, my name is Vibhanshu Jain and I have created the OnBeirut Agency which aims to solve various issues small lebanese
-                                businesses face. You are free to use the website as a template for yourself as long as you
-                                give credit.
+                            Built with passion to showcase projects, ideas, and creativity. Feel free to explore, connect, and collaborate
+                            This site is a glimpse into my journey as a developer — from learning and building to sharing and growing. Let's connect!
                             </Typography>
                         </Box>
 
