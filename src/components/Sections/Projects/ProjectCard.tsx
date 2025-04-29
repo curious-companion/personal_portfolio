@@ -68,7 +68,13 @@ const ProjectCard = ({
                 position: 'relative'
             }}>
 
-                <Image alt='Project Image' className='img1' src={`${img}`}/>
+                <Image 
+                    alt='Project Image' 
+                    className='img1' 
+                    src={`${img}`}
+                    width={600}
+                    height={400}
+                    />
             </Box>
             <Box
                 ref={ref}
