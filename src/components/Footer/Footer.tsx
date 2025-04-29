@@ -17,9 +17,7 @@ function Copyright() {
 
             <Typography variant='h1' fontSize='1em'>
                 {'Copyright © '}
-                <Link color="inherit" target='_blank'  rel="noreferrer" href="https://onbeirut.onrender.com">
-                    onbeirut.onrender.com
-                </Link>{' '} {new Date().getFullYear()}
+                {' '} {new Date().getFullYear()}
                 {'.'}
             </Typography>
         </Box>
