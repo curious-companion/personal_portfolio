@@ -73,7 +73,7 @@ function Footer() {
                                 This site is a glimpse into my journey as a developer — from learning and building to sharing and growing.
                             </Typography>
                             <Typography variant="h3" fontSize="1em">
-                                Let's connect and grow together!
+                                Let&apos;s connect and grow together!
                             </Typography>
                         </Box>
                     </Grid>
