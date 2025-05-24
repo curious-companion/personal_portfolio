@@ -1,5 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://your-portfolio-url.vercel.app', // your actual domain
+  siteUrl: 'https://vibhanshujainportfolio.vercel.app', // your actual domain
   generateRobotsTxt: true,
 };
