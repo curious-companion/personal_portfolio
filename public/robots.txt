@@ -1,9 +1,4 @@
-# *
 User-agent: *
 Allow: /
 
-# Host
-Host: https://vibhanshujain.vercel.app
-
-# Sitemaps
 Sitemap: https://vibhanshujain.vercel.app/sitemap.xml
