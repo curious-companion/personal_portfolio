@@ -1,11 +1,11 @@
 import type { AppProps } from 'next/app';
-import '../styles/styles.css';
-import { ThemeProvider } from '@emotion/react';
-import { createTheme } from '@mui/material';
-import { createContext, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, createContext } from 'react';
+import { useRouter } from 'next/router';
+import Script from 'next/script';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import '../styles/styles.css';
 import ThemeHook from '../src/Hooks/ThemeHook';
-import Script from 'next/script'; // ✅ Import next/script
 
 export const ColorModeContext = createContext({
   mode: 'dark',
@@ -15,7 +15,7 @@ export const ColorModeContext = createContext({
 function MyApp({ Component, pageProps }: AppProps) {
   const [mode, setMode] = useState<'light' | 'dark'>('dark');
   const getDesignTokens = ThemeHook(mode, setMode);
-  const Theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
+  const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
 
   const colorMode = useMemo(
     () => ({
@@ -27,12 +27,28 @@ function MyApp({ Component, pageProps }: AppProps) {
     [mode]
   );
 
+  // Google Analytics page tracking (SPA)
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      if (typeof window.gtag !== 'undefined') {
+        window.gtag('config', 'G-S1GYT9Q22G', {
+          page_path: url,
+        });
+      }
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => router.events.off('routeChangeComplete', handleRouteChange);
+  }, [router.events]);
+
   return (
     <>
-      {/* ✅ Google Analytics */}
+      {/* ✅ Google Analytics Setup */}
       <Script
         strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-HTNXZYS704"
+        src="https://www.googletagmanager.com/gtag/js?id=G-S1GYT9Q22G"
       />
       <Script
         id="gtag-init"
@@ -42,16 +58,16 @@ function MyApp({ Component, pageProps }: AppProps) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-HTNXZYS704', {
+            gtag('config', 'G-S1GYT9Q22G', {
               page_path: window.location.pathname,
             });
           `,
         }}
       />
 
-      {/* ✅ Theme and App Content */}
+      {/* ✅ Theme Setup */}
       <ColorModeContext.Provider value={colorMode}>
-        <ThemeProvider theme={Theme}>
+        <ThemeProvider theme={theme}>
           <CssBaseline />
           <Component {...pageProps} />
         </ThemeProvider>
