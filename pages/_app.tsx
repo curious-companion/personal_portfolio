@@ -1,44 +1,63 @@
-import type {AppProps}
-from 'next/app'
+import type { AppProps } from 'next/app';
 import '../styles/styles.css';
-import {ThemeProvider} from '@emotion/react'
-import {createTheme} from "@mui/material"
-import {createContext, useMemo, useState} from 'react'
+import { ThemeProvider } from '@emotion/react';
+import { createTheme } from '@mui/material';
+import { createContext, useMemo, useState } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
-import ThemeHook from '../src/Hooks/ThemeHook'
+import ThemeHook from '../src/Hooks/ThemeHook';
+import Script from 'next/script'; // ✅ Import next/script
 
 export const ColorModeContext = createContext({
-    mode: 'dark',
-    toggleColorMode: () => {}
+  mode: 'dark',
+  toggleColorMode: () => {},
 });
 
-function MyApp({Component, pageProps} : AppProps) {
-    const [mode,
-        setMode] = useState < 'light' | 'dark' > ('dark');
-    const getDesignTokens = ThemeHook(mode, setMode);
-    const Theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
+function MyApp({ Component, pageProps }: AppProps) {
+  const [mode, setMode] = useState<'light' | 'dark'>('dark');
+  const getDesignTokens = ThemeHook(mode, setMode);
+  const Theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
 
-    const colorMode = useMemo(() => ({
-        mode,
-        toggleColorMode: () => {
-            setMode((prevMode) => (prevMode === 'light'
-                ? 'dark'
-                : 'light'));
-        }
-    }), [mode]);
+  const colorMode = useMemo(
+    () => ({
+      mode,
+      toggleColorMode: () => {
+        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+      },
+    }),
+    [mode]
+  );
 
-    return <ColorModeContext.Provider value={colorMode}>
+  return (
+    <>
+      {/* ✅ Google Analytics */}
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-HTNXZYS704"
+      />
+      <Script
+        id="gtag-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-HTNXZYS704', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
 
-        <ThemeProvider theme={{
-            ...Theme
-        }}>
-            <CssBaseline/>
-
-  
-                <Component {...pageProps}/>
-           
+      {/* ✅ Theme and App Content */}
+      <ColorModeContext.Provider value={colorMode}>
+        <ThemeProvider theme={Theme}>
+          <CssBaseline />
+          <Component {...pageProps} />
         </ThemeProvider>
-    </ColorModeContext.Provider>
+      </ColorModeContext.Provider>
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;
