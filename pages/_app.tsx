@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app';
 import { useEffect, useMemo, useState, createContext } from 'react';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
+import Head from 'next/head';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import '../styles/styles.css';
@@ -27,7 +28,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     [mode]
   );
 
-  // Google Analytics page tracking (SPA)
   const router = useRouter();
 
   useEffect(() => {
@@ -45,6 +45,14 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      {/* ✅ Canonical Tag */}
+      <Head>
+        <link
+          rel="canonical"
+          href={`https://vibhanshujain.vercel.app${router.asPath === '/' ? '' : router.asPath}`}
+        />
+      </Head>
+
       {/* ✅ Google Analytics Setup */}
       <Script
         strategy="afterInteractive"

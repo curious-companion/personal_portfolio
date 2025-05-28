@@ -1,7 +1,7 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 
 const Document = () => (
-  <Html>
+  <Html lang='en'>
     <Head>
       {/* Google Site Verification */}
       <meta name="google-site-verification" content="ltlTSFeAemYqs-hXORek1LejHOKvihtuN8tn6BpvNUE" />
@@ -16,7 +16,6 @@ const Document = () => (
       <meta property="og:description" content="Explore Vibhanshu Jain's portfolio with full-stack projects and skills in web development." />
       <meta property="og:url" content="https://vibhanshujainportfolio.vercel.app" />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content="https://vibhanshujainportfolio.vercel.app/og-image.jpg" /> {/* Replace with your image if available */}
 
       {/* Fonts */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
