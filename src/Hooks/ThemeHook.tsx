@@ -15,7 +15,9 @@ const ThemeHook = (mode : 'light' | 'dark',setMode :  Dispatch<SetStateAction<"l
             "fontFamily": `'Montserrat', sans-serif`,
             "fontSize": 16,
             h1: {
-                color
+                color: mode === 'light'
+                    ? '#000000'
+                    : '#ffffff'
             },
             h2: {
                 color: mode === 'light'
@@ -70,7 +72,7 @@ const ThemeHook = (mode : 'light' | 'dark',setMode :  Dispatch<SetStateAction<"l
                         main: '#0092ff'
                     },
                     text: {
-                        primary: '#000000'
+                        primary: '#ffffff'
                     }
                 })
         }

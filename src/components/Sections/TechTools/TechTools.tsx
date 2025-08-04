@@ -7,15 +7,11 @@ import ToolCard from './ToolCard';
 import gsap from 'gsap';
 
 const TechTools = ({ iconsArray }: any) => {
-  console.log('Received iconsArray:', iconsArray);
 
   let Languages = iconsArray && iconsArray.filter((icon: any) => icon.filter === 'Language');
   let Framework = iconsArray && iconsArray.filter((icon: any) => icon.filter === 'Framework');
   let Databases = iconsArray && iconsArray.filter((icon: any) => icon.filter === 'Database'); // <- typo alert, see below
 
-  console.log('Filtered Languages:', Languages);
-  console.log('Filtered Framework:', Framework);
-  console.log('Filtered Databases:', Databases);
 
   const colorMode = useContext(ColorModeContext);
 
@@ -23,7 +19,6 @@ const TechTools = ({ iconsArray }: any) => {
     colorMode?.mode === 'light' ? false : item?.filter;
 
   useEffect(() => {
-    console.log('Running MainTitleAnimation and gsap setup...');
     MainTitleAnimation('.title1', '.title2');
     gsap.to('.secondTitle', {
       opacity: 1,

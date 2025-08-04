@@ -51,7 +51,7 @@ const Layout = ({navbarSx, title ,children ,desc } : ILayout) => {
     <meta name="author" content="Vibhanshu Jain" />
     <meta name="publisher" content="publisher"/>
     <meta name="copyright" content="copyright"/>
-    <meta name="page-topic" content="Web Development | Blog"/>
+    <meta name="page-topic" content="Full stack Development | Blog"/>
     <meta name="page-type" content="Blogging"/>
     <meta name="audience" content="Everyone"/>
     {/* <!-- Facebook, whatsapp, instagram, twitter and other popular social media --> */}

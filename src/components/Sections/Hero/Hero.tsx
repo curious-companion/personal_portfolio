@@ -170,7 +170,7 @@ const Hero = () => {
                             <Image
 
                             
-                            layout='fill'
+                            fill
 
                                 style={{
                                 opacity: 0,

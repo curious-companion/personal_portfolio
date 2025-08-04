@@ -28,7 +28,7 @@ const styles = {
     flexDirection: 'column',
     gap: '15px',
     flexWrap: 'wrap',
-    color: 'white',
+    color: 'Vibhanshu',
 };
 
 function Footer() {
