@@ -22,6 +22,4 @@ To get started with this template, follow these steps:
 
 Contributions to this project are welcome! If you have an idea for a new feature or improvement, please open an issue to discuss it. Pull requests are also welcome.
 
-## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for more information.
